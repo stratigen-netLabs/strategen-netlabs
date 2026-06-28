@@ -1,0 +1,246 @@
+/* Deep Blue Premium Engineering Aesthetic Configuration */
+:root {
+    --dark-prime-bg: #070c14;      /* Deep dark background */
+    --card-surface-bg: #0e1726;    /* Dark navy card boxes */
+    --electric-cyan: #38bdf8;      /* Neon blue tech highlights */
+    --crystal-white: #f8fafc;
+    --slate-muted: #94a3b8;
+    --border-deep: #1e293b;
+    --navigation-bar-height: 70px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: var(--dark-prime-bg) !important;
+    color: var(--crystal-white);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Navbar Flex Setup - Forces layout elements into correct positions */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--navigation-bar-height);
+    background-color: #070c14;
+    border-bottom: 1px solid var(--border-deep);
+    z-index: 9999;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between; /* Pushes brand to left, items to right */
+    align-items: center;
+    height: 100%;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+.brand-logo {
+    width: 32px !important;
+    height: 32px !important;
+    object-fit: contain;
+}
+
+.brand-name {
+    color: var(--crystal-white);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* FORCES NAV LINKS TO DISPLAY SIDE-BY-SIDE ON THE RIGHT CORNER */
+.nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    list-style: none !important;
+    gap: 2rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--slate-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.25s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: var(--electric-cyan);
+}
+
+/* Content Container Configuration */
+.main-wrapper {
+    max-width: 1140px;
+    margin: calc(var(--navigation-bar-height) + 3rem) auto 4rem auto;
+    padding: 0 1.5rem;
+}
+
+.content-section {
+    padding: 4rem 0;
+}
+
+.section-heading {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Forces Profile elements to stay cleanly side-by-side */
+.split-flex-container {
+    background-color: var(--card-surface-bg);
+    border: 1px solid var(--border-deep);
+    border-radius: 12px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+}
+
+.avatar-display {
+    width: 140px !important;
+    height: 140px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--electric-cyan);
+}
+
+.right-text-pane {
+    flex: 1;
+}
+
+.main-title { font-size: 2.2rem; margin-bottom: 0.2rem; }
+.sub-title { color: var(--electric-cyan); font-size: 1.05rem; margin-bottom: 1.25rem; }
+.profile-bio { color: var(--slate-muted); line-height: 1.65; margin-bottom: 1.5rem; }
+
+/* FIXES SOCIAL MEDIA ICONS BENEATH THE ABOUT PARAGRAPH DIRECTLY */
+.social-icon-row {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 1rem !important;
+    margin-top: 1rem !important;
+}
+
+.icon-bubble {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-prime-bg);
+    color: var(--crystal-white);
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border: 1px solid var(--border-deep);
+}
+
+.icon-bubble:hover {
+    background-color: var(--electric-cyan);
+    color: var(--dark-prime-bg);
+}
+
+/* Grids Framework */
+.horizontal-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.feature-card, .badge-card {
+    background-color: var(--card-surface-bg);
+    border: 1px solid var(--border-deep);
+    padding: 2.2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card-icon-box i { font-size: 2.2rem; color: var(--electric-cyan); margin-bottom: 1.25rem; }
+.feature-card p { color: var(--slate-muted); font-size: 0.9rem; line-height: 1.6; }
+
+.achievements-layout { display: flex; flex-direction: column; gap: 3.5rem; width: 100%; }
+.cert-showcase-box {
+    background-color: var(--card-surface-bg);
+    border: 1px solid var(--border-deep);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cert-img-wrapper { width: 35%; }
+.portfolio-cert-img { width: 100%; object-fit: contain; }
+.cert-text-wrapper { padding: 2.5rem; flex: 1; }
+.institution-tag { color: var(--electric-cyan); font-weight: 600; margin-bottom: 1.2rem; }
+.credential-bullet-list { list-style-position: inside; color: var(--slate-muted); }
+
+.badge-thumbnail-box { width: 54px !important; height: 54px !important; margin: 0 auto 1rem auto; }
+.badge-asset { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+.monetization-banner-box {
+    background-color: var(--card-surface-bg);
+    border: 1px solid var(--electric-cyan);
+    border-radius: 12px;
+    padding: 3.5rem 2rem;
+    text-align: center;
+}
+
+.monetag-redirect-btn {
+    display: inline-block;
+    background-color: var(--electric-cyan);
+    color: var(--dark-prime-bg);
+    text-decoration: none;
+    padding: 0.8rem 1.75rem;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+.contact-card-frame {
+    background-color: var(--card-surface-bg);
+    border-radius: 12px;
+    padding: 3rem;
+    max-width: 650px;
+    margin: 0 auto;
+    border: 1px solid var(--border-deep);
+}
+
+.clean-form-container { display: flex; flex-direction: column; gap: 1.25rem; }
+.input-field, .textarea-field {
+    width: 100%; padding: 0.85rem; background-color: var(--dark-prime-bg);
+    border: 1px solid var(--border-deep); color: var(--crystal-white); border-radius: 6px;
+}
+
+.form-dispatch-btn {
+    background-color: transparent; color: var(--electric-cyan);
+    border: 1px solid var(--electric-cyan); padding: 0.85rem; font-weight: 700; border-radius: 6px; cursor: pointer;
+}
+
+.form-dispatch-btn:hover { background-color: var(--electric-cyan); color: var(--dark-prime-bg); }
+.bottom-footer { text-align: center; padding: 2.5rem; margin-top: 5rem; border-top: 1px solid var(--border-deep); }
+.copyright-text { color: var(--slate-muted); font-size: 0.85rem; }
+
+/* Restricts local asset icons to fit perfectly inside bubbles */
+.local-social-icon {
+    width: 20px !important;
+    height: 20px !important;
+    object-fit: contain;
+    filter: invert(1); /* Turns dark icons white to match your tech theme */
+}
