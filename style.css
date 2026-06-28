@@ -244,3 +244,38 @@ html, body {
     object-fit: contain;
     filter: invert(1); /* Turns dark icons white to match your tech theme */
 }
+
+/* Responsive Mobile Typography and Layout Viewport Optimization */
+@media (max-width: 900px) {
+    /* Enlarge paragraph bio text sizing for easy smartphone reading */
+    .profile-bio {
+        font-size: 1.15rem !important;
+        line-height: 1.75 !important;
+    }
+    
+    .main-title {
+        font-size: 2.5rem !important;
+    }
+    
+    .sub-title {
+        font-size: 1.3rem !important;
+    }
+
+    /* Upscale the social icon bubbles to make them easy to tap on screens */
+    .social-icon-row {
+        gap: 1.5rem !important;
+        margin-top: 1.5rem !important;
+    }
+
+    .icon-bubble {
+        width: 55px !important;
+        height: 55px !important;
+        border: 2px solid var(--electric-cyan) !important;
+    }
+
+    /* Upscale your local image assets inside the expanded bubbles */
+    .local-social-icon {
+        width: 26px !important;
+        height: 26px !important;
+    }
+}
